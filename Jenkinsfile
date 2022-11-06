@@ -1,11 +1,6 @@
 pipeline {
   agent any
   stages {
-        stage('version') {
-      steps {
-        sh 'python3 --version'
-      }
-    }
     stage('robot') {
       steps {
         sh 'pip install robotframework'
