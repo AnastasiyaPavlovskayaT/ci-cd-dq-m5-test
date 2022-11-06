@@ -1,20 +1,20 @@
-import pyodbc
+import pymssql
 
-conn = pyodbc.connect(
-    "Driver={SQL Server};"
-    "Server=EPBYGROW00BD\\SQLEXPRESS;"
-    "Database=AdventureWorks2012;"
-    "Trusted_Connection=yes;"
-)
+conn = pymssql.connect(
+        host='192.168.0.185',
+        user='roboto',
+        password="roboto123",
+        database='AdventureWorks2012',
+        )
 
 
 def connect_db():
-    conn_db = pyodbc.connect(
-        "Driver={SQL Server};"
-        "Server=EPBYGROW00BD\\SQLEXPRESS;"
-        "Database=AdventureWorks2012;"
-        "Trusted_Connection=yes;"
-    )
+    conn_db = pymssql.connect(
+        host='192.168.0.185',
+        user='roboto',
+        password="roboto123",
+        database='AdventureWorks2012',
+        )
     return conn_db.cursor()
 
 
