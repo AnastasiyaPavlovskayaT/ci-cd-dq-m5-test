@@ -1,23 +1,30 @@
 pipeline {
-  agent none
-  stages {
-    stage('version') {
-      agent {
-          docker {
-              //This image parameter (of the agent section’s docker parameter) downloads the python:2-alpine
-              //Docker image and runs this image as a separate container. The Python container becomes
-              //the agent that Jenkins uses to run the Build stage of your Pipeline project.
-              image 'python:2-alpine'
-          }
+   agent any
+
+   stages {
+      stage('Build') {
+        steps {
+          echo 'Building...'
+          echo "Running ${env.BUILD_ID} ${env.BUILD_DISPLAY_NAME} on ${env.NODE_NAME} and JOB ${env.JOB_NAME}"
+        }
       }
-      steps {
-        sh 'python --version'
-      }
-    }
-    stage('hello') {
-      steps {
-        sh 'python hello.py'
-      }
-    }
+      stage('List') {
+        steps{      
+          bat("dir /B ${JENKINS_HOME}")
+        }
+
+
+        }
+
+   stage('Test') {
+     steps {
+        echo 'Testing...'
+     }
+   }
+   stage('Deploy') {
+     steps {
+       echo 'Deploying...'
+     }
+   }
   }
-}
+} 
