@@ -4,10 +4,6 @@ pipeline {
     stage('robot') {
       steps {
         sh 'pip install robotframework'
-      }
-    }
-   stage('robotdb') {
-      steps {
         sh 'pip install robotframework-databaselibrary'
       }
     }
