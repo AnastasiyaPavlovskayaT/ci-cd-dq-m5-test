@@ -23,7 +23,7 @@ pipeline {
         sh 'python3 -m pytest test_dqchecks_sqlscripts.py'
       }
     }
-     stage('Test suite 3. Pytest') {
+     stage('Test suite 3. PyTest') {
       steps {
         sh 'python3 -m pytest test_dqchecks_methods.py'
       }
