@@ -1,38 +1,27 @@
 pipeline {
   agent any
   stages {
-    stage('robot') {
+    stage('Installing required libraries') {
       steps {
+        echo 'Installing required pyhon libraries'
         sh 'pip install robotframework'
         sh 'pip install robotframework-databaselibrary'
-      }
-    }
-   stage('pymssql') {
-      steps {
         sh 'pip install pymssql'
-      }
-    }
-       stage('pyodbc') {
-      steps {
         sh 'pip install pyodbc'
-      }
-    }
-           stage('pytest') {
-      steps {
         sh 'pip install pytest'
       }
-    }
-    stage('test robot run') {
+    }         
+    stage('Test suite 1. Robot') {
       steps {
         sh 'robot test_cases.robot'
       }
     }
-    stage('tests pytest 1 suite') {
+    stage('Test suite 2. Pytest') {
       steps {
         sh 'python3 -m pytest test_dqchecks_sqlscripts.py'
       }
     }
-        stage('tests pytest 2 suite') {
+     stage('Test suite 3. Pytest') {
       steps {
         sh 'python3 -m pytest test_dqchecks_methods.py'
       }
