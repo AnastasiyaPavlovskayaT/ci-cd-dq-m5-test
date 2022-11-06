@@ -36,5 +36,10 @@ pipeline {
         sh 'robot test_cases.robot'
       }
     }
+        stage('hello') {
+      steps {
+        sh 'python3 test_dqchecks_sqlscripts.py'
+      }
+    }
   }
 }
