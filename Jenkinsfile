@@ -31,11 +31,6 @@ pipeline {
         sh 'pip install pytest'
       }
     }
-    stage('hello') {
-      steps {
-        sh 'python3 hello.py'
-      }
-    }
     stage('test robot run') {
       steps {
         sh 'robot test_cases.robot'
