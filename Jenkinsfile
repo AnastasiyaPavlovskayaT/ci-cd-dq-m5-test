@@ -13,11 +13,13 @@ pipeline {
     }         
     stage('Test suite 1. Robot') {
       steps {
+        echo 'Testing using Robot Framework'
         sh 'robot test_cases.robot'
       }
     }
-    stage('Test suite 2. Pytest') {
+    stage('Test suite 2. PyTest') {
       steps {
+        echo 'Testing using PyTest Framework'
         sh 'python3 -m pytest test_dqchecks_sqlscripts.py'
       }
     }
