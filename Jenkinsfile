@@ -1,9 +1,19 @@
 pipeline {
   agent any
   stages {
-    stage('version') {
+    stage('robot') {
       steps {
         sh 'pip install robotframework'
+      }
+    }
+   stage('robotdb') {
+      steps {
+        sh 'pip install robotframework-databaselibrary'
+      }
+    }
+   stage('pymssql') {
+      steps {
+        sh 'pip install pymssql'
       }
     }
     stage('hello') {
