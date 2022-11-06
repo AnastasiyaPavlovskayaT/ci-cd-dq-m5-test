@@ -1,6 +1,6 @@
-import pyodbc
+import pypyodbc
 
-conn = pyodbc.connect(
+conn = pypyodbc.connect(
     "Driver={SQL Server};"
     "Server=EPBYGROW00BD\\SQLEXPRESS;"
     "Database=AdventureWorks2012;"
@@ -9,7 +9,7 @@ conn = pyodbc.connect(
 
 
 def connect_db():
-    conn_db = pyodbc.connect(
+    conn_db = pypyodbc.connect(
         "Driver={SQL Server};"
         "Server=EPBYGROW00BD\\SQLEXPRESS;"
         "Database=AdventureWorks2012;"
