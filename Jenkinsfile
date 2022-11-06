@@ -41,9 +41,14 @@ pipeline {
         sh 'robot test_cases.robot'
       }
     }
-    stage('tests pytest 1') {
+    stage('tests pytest 1 suite') {
       steps {
         sh 'python3 test_dqchecks_sqlscripts.py'
+      }
+    }
+        stage('tests pytest 2 suite') {
+      steps {
+        sh 'python3 test_dqchecks_methods.py'
       }
     }
   }
