@@ -16,6 +16,16 @@ pipeline {
         sh 'pip install pymssql'
       }
     }
+       stage('pypyodbc') {
+      steps {
+        sh 'pip install pypyodbc'
+      }
+    }
+           stage('pytest') {
+      steps {
+        sh 'pip install pytest'
+      }
+    }
     stage('hello') {
       steps {
         sh 'python3 hello.py'
