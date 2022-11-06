@@ -23,7 +23,7 @@ pipeline {
     }
        stage('pyodbc') {
       steps {
-        sh 'pip install pypyodbc'
+        sh 'pip install pyodbc'
       }
     }
            stage('pytest') {
