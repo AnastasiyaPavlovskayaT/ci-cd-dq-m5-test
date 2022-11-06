@@ -1,7 +1,7 @@
 import pyodbc
 
 conn = pyodbc.connect(
-    "Driver={ODBC Driver 13 for SQL Server};"
+    "Driver={SQL Server};"
     "Server=EPBYGROW00BD\\SQLEXPRESS;"
     "Database=AdventureWorks2012;"
     "Trusted_Connection=yes;"
@@ -10,7 +10,7 @@ conn = pyodbc.connect(
 
 def connect_db():
     conn_db = pyodbc.connect(
-        "Driver={ODBC Driver 13 for SQL Server};"
+        "Driver={SQL Server};"
         "Server=EPBYGROW00BD\\SQLEXPRESS;"
         "Database=AdventureWorks2012;"
         "Trusted_Connection=yes;"
