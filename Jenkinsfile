@@ -21,5 +21,10 @@ pipeline {
         sh 'python3 hello.py'
       }
     }
+    stage('test robot run') {
+      steps {
+        sh 'robot test_cases.robot'
+      }
+    }
   }
 }
