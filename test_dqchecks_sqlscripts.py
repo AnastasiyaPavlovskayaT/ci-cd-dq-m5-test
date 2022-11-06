@@ -1,6 +1,4 @@
-import pypyodbc
-import pytest_html_reporter
-import pytest
+
 import connections
 
 
