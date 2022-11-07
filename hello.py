@@ -1,1 +1,1 @@
-print('Hello World tывеывекпяzdSRrdf 5')
+print('Hello World ')
