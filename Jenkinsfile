@@ -33,7 +33,7 @@ pipeline {
         sh 'git config --global user.name "AnastasiyaPavlovskayaT"'
         sh 'git config --global user.email "anastasiya_paulouskaya1@epam.com"'
         sh 'git config --list'
-        sh 'git checkout -b release4'
+        sh 'git checkout -b release5'
         sh 'git push https://oauth2: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@github.com/AnastasiyaPavlovskayaT/ci-cd-dq-m5-test.git'
       }
     }
