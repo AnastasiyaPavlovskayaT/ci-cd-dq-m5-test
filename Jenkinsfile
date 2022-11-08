@@ -30,10 +30,11 @@ pipeline {
     }
     stage('Create new branch') {
       steps {
-        sh 'ls'
+        sh 'git config --global user.name "AnastasiyaPavlovskayaT"'
+        sh 'git config --global user.email "anastasiya_paulouskaya1@epam.com"'
         sh 'git config --list'
-        sh 'git checkout -b release'
-        sh 'git push origin release'
+        sh 'git checkout -b release1'
+        sh 'git push origin release1'
       }
     }
   }
