@@ -30,6 +30,8 @@ pipeline {
     }
     stage('Create new branch') {
       steps {
+        sh 'ls'
+        sh 'git config --list'
         sh 'git checkout -b release'
         sh 'git push origin release'
       }
