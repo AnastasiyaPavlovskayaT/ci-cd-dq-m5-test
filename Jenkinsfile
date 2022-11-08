@@ -28,5 +28,11 @@ pipeline {
         sh 'python3 -m pytest test_dqchecks_methods.py'
       }
     }
+    stage('Create new branch') {
+      steps {
+        sh 'git checkout -b release'
+        sh 'git push origin release'
+      }
+    }
   }
 }
