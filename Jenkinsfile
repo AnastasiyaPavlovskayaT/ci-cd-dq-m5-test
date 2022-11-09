@@ -45,14 +45,11 @@ pipeline {
             }
         }
     stage("Push") {
-            environment {
-                GIT_AUTH = credentials('support-team-up')
-            }
             steps {
                 sh('''
                     git config --local credential.helper "!f() { echo username=\\$GIT_AUTH_USR; echo password=\\$GIT_AUTH_PSW; }; f"
-                    git push origin HEAD:$TARGET_BRANCH
-                ''')
+                    git push origin release12
+                    ''')
             }
         }
   }
