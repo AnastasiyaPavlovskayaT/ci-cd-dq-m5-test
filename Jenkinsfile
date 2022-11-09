@@ -34,7 +34,7 @@ pipeline {
         sh 'git add .'
         sh 'git config --global user.name "AnastasiyaPavlovskayaT"'
         sh 'git config --global user.email "at.pavlovskaya@gmail.com"'
-        sh 'git commit -a'
+        sh 'git commit -m "commit"'
       }
     }
   }
