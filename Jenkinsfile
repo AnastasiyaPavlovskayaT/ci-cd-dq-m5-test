@@ -1,4 +1,4 @@
-9pipeline {
+pipeline {
   agent any
   stages {
     stage('Installing required libraries') {
