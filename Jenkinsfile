@@ -30,7 +30,8 @@ pipeline {
     }
      stage('Create new branch') {
       steps {
-        sh 'git checkout -b release22'
+        sh 'git checkout -b release23'
+        sh 'git add .'
         sh 'git config --global user.name "AnastasiyaPavlovskayaT"'
         sh 'git config --global user.email "at.pavlovskaya@gmail.com"'
         sh 'git commit -a'
