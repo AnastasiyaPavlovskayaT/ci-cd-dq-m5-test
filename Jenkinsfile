@@ -30,11 +30,12 @@ pipeline {
     }
      stage('Create new branch') {
       steps {
-        sh 'git checkout -b release24'
+        sh 'git checkout -b release26'
         sh 'git add .'
         sh 'git config --global user.name "AnastasiyaPavlovskayaT"'
         sh 'git config --global user.email "at.pavlovskaya@gmail.com"'
         sh 'git commit -m "commit"'
+        sh 'git push https://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@github.com/AnastasiyaPavlovskayaT/ci-cd-dq-m5-test.git'
       }
     }
   }
